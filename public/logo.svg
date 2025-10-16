@@ -1,0 +1,31 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8338ec;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="30" cy="30" r="28" fill="url(#logoGradient)" opacity="0.1"/>
+  
+  <!-- Main Logo Shape -->
+  <path d="M15 20 L30 10 L45 20 L45 40 L30 50 L15 40 Z" fill="url(#logoGradient)" stroke="url(#logoGradient)" stroke-width="2"/>
+  
+  <!-- Inner Elements -->
+  <circle cx="30" cy="30" r="8" fill="white" opacity="0.9"/>
+  <path d="M25 25 L30 30 L35 25" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+  <path d="M25 35 L30 30 L35 35" stroke="url(#logoGradient)" stroke-width="2" fill="none"/>
+  
+  <!-- Tech Elements -->
+  <circle cx="20" cy="20" r="2" fill="url(#logoGradient)"/>
+  <circle cx="40" cy="20" r="2" fill="url(#logoGradient)"/>
+  <circle cx="20" cy="40" r="2" fill="url(#logoGradient)"/>
+  <circle cx="40" cy="40" r="2" fill="url(#logoGradient)"/>
+</svg>
+
+
+
+
+
+

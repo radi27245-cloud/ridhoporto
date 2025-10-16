@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { personalInfo, aboutSections, stats } from '@/data/personal';
 import Card from '@/components/ui/Card';
-import { cn } from '@/lib/utils';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({

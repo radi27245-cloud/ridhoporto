@@ -4,7 +4,6 @@ import { useInView } from 'react-intersection-observer';
 import { hobbies } from '@/data/personal';
 import { Gamepad2, Monitor, Cpu, Users } from 'lucide-react';
 import Card from '@/components/ui/Card';
-import { cn } from '@/lib/utils';
 
 const Hobbies: React.FC = () => {
   const [ref, inView] = useInView({

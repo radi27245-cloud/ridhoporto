@@ -151,10 +151,17 @@ export interface InputProps {
   type?: 'text' | 'email' | 'tel' | 'textarea';
   placeholder?: string;
   value?: string;
-  onChange?: (value: string) => void;
+  onChange?: (value: string) => void | ((event: any) => void);
+  onBlur?: (value: string) => void | ((event: any) => void);
+  name?: string;
+  ref?: any;
   className?: string;
   required?: boolean;
   disabled?: boolean;
+  min?: string | number;
+  max?: string | number;
+  step?: string | number;
+  pattern?: string;
 }
 
 export interface TextareaProps extends Omit<InputProps, 'type'> {

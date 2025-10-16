@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useForm } from 'react-hook-form';
@@ -6,10 +6,8 @@ import toast from 'react-hot-toast';
 import { Mail, Phone, MapPin, GraduationCap, Send } from 'lucide-react';
 import { contactInfo, socialLinks } from '@/data/personal';
 import Button from '@/components/ui/Button';
-import Input, { Textarea } from '@/components/ui/Input';
 import Card from '@/components/ui/Card';
 import { FormData } from '@/types';
-import { cn } from '@/lib/utils';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
@@ -41,7 +39,7 @@ const Contact: React.FC = () => {
     }
   };
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async (_data: FormData) => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -184,8 +182,10 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Input
+                    <input
+                      type="text"
                       placeholder="Your Name"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       {...register('name', { required: 'Name is required' })}
                     />
                     {errors.name && (
@@ -193,9 +193,10 @@ const Contact: React.FC = () => {
                     )}
                   </div>
                   <div>
-                    <Input
+                    <input
                       type="email"
                       placeholder="Your Email"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                       {...register('email', { 
                         required: 'Email is required',
                         pattern: {
@@ -211,8 +212,10 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div>
-                  <Input
+                  <input
+                    type="text"
                     placeholder="Subject"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                     {...register('subject', { required: 'Subject is required' })}
                   />
                   {errors.subject && (
@@ -221,9 +224,10 @@ const Contact: React.FC = () => {
                 </div>
                 
                 <div>
-                  <Textarea
+                  <textarea
                     placeholder="Your Message"
                     rows={5}
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 resize-none"
                     {...register('message', { required: 'Message is required' })}
                   />
                   {errors.message && (

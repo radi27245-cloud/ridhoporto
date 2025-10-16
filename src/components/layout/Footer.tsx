@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { socialLinks } from '@/data/personal';
-import { cn } from '@/lib/utils';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
